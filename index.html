@@ -8,7 +8,7 @@
     <link href="normalize.css" rel="stylesheet" type="text/css"/>
     <link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
-<body>
+<body onload="slider ()">
     <!-- Navbar Section -->
     <nav class="navbar">
       <div class="navbar__container">
@@ -37,10 +37,29 @@
     <!-- Slideshow Section -->
     <div class="banner">
         <div class="slider">
-            <img src="slide/slide2.jpeg" id="sliderImg"></img>
+            <img src="slide/slide3.jpeg" id="sliderImg"></img>
         </div>
-    </div>    
-    
+    </div> 
+
+    <script>
+        var sliderImg = document.getElementById("sliderImg");
+        var slide = new Array(
+            "slide/slide1.jpeg",
+            "slide/slide2.jpeg",
+            "slide/slide3.jpeg"
+        );
+    var len = slide.length;
+    var i = 0;
+
+    function slider () {
+        if(i > len-1) {
+            i = 0;
+        }
+        sliderImg.src = slide[i];
+        i++;
+        setTimeout('slider()',5000);
+    };
+    </script>
     <script src="app.js"></script>
 </body>
 </html>

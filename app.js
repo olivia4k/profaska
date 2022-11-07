@@ -55,9 +55,4 @@ const hideMobileMenu = () => {
 menuLinks.addEventListener('click', hideMobileMenu);
 navLogo.addEventListener('click', hideMobileMenu);
 
-var slideImg = document.getElementById("slideImg");
-var images = new Array(
-    "slide/slide1.jpeg"
-    "slide/slide2.jpeg"
-    "slide/slide3.jpeg"
-    );
+//  Slideshow
