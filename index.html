@@ -7,6 +7,9 @@
     <title>Profaska</title>
     <link href="normalize.css" rel="stylesheet" type="text/css"/>
     <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap" rel="stylesheet">
 </head>
 <body onload="slider ()">
     <!-- Navbar Section -->
@@ -35,10 +38,34 @@
     </nav>
 
     <!-- Slideshow Section -->
-    <div class="banner">
-        <div class="slider">
-            <img src="slide/slide3.jpeg" id="sliderImg"></img>
-        </div>
+    <div class="carousel">
+      <button class="carousel__button carousel__button--left">
+        <img src="left.svg" alt="">
+      </button>
+      
+      <div class="carousel__track-container">
+        <ul class="carousel__track">
+          <li class="carousel__slide">
+            <img class="carousel__image" src="slide/slide1.jpeg" alt="">
+          </li>
+          <li class="carousel__slide">
+            <img class="carousel__image" src="slide/slide2.jpeg" alt="">
+          </li>
+          <li class="carousel__slide">
+            <img class="carousel__image" src="slide/slide3.jpeg" alt="">
+          </li>
+        </ul>
+      </div>
+      
+      <button class="carousel__button carousel__button--right">
+        <img src="right.svg" alt="">
+      </button>
+
+      <div class="carousel__nav">
+        <button class="carousel__indicator"></button>
+        <button class="carousel__indicator"></button>
+        <button class="carousel__indicator"></button>
+      </div>
     </div> 
 
     <script>

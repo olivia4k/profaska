@@ -2,8 +2,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif
+    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    font-size: 1.0rem;
   }
   
   .navbar {
@@ -55,7 +56,17 @@
     color: #4716e9;
     transition: all 0.3s ease;
   }
-  
+  .navbar__active {
+    color: #4716e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    text-decoration: none;
+    height: 100%;
+    transition: all 0.3s ease;
+  }
+
   .navbar__logo {
     background-color: #000000;
     background-image: linear-gradient(to top, #000000 0%, #000000 100%);
@@ -71,40 +82,79 @@
     font-size: 1.2rem;
   }
   /* Slideshow Section */
+.carousel {
+  position: relative;
+  height: 600px;
+  width: 50%;
+  margin: 0 auto;
+}
+.carousel__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carousel__track-container {
+  background: lightgreen;
+  height: 100%;
+  position: relative;
+}
 
-  .banner {
-    min-height: 50vh;
-    width: 100%;
-    overflow: hidden;
-    transition-property: opacity;
-    transition-duration: 1000ms;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0s;
-  }
-  .slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #sliderImg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 600px;
-    width: auto;
-    padding: 16px;
-    animation: fade infinite;
-    animation-duration: 5s;
-  }
+.carousel__track {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 80px;
+  background: transparent;
+  border: 0;
+}
+.carousel__button--left {
+  left: -100px;
+}
+.carousel__button img {
+  width: 40px;
+}
+.carousel__button--right {
+  right:-100px;
+}
+.carousel__nav {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+.carousel__indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background: rgba(0, 0, 0,.2);
+  margin: 0 12px;
+}
+.carousel__indicator.current-slide {
+  background-color: rgba(0, 0, 0,.8);
+}
+
+
+
 
   @keyframes fade {
     0% {
         opacity: 0.0;
     }
-    25% {
+    15% {
         opacity: 1.0;
     }
-    75% {
+    85% {
         opacity: 1.0;
     }
     100% {
@@ -132,14 +182,87 @@
   .contact__content {
     color: rgb(63, 63, 63);
     width: 100%;
-    font-size:  1rem;
+    font-size:  1.1rem;
   }
   .contact__title {
     color: rgb(63, 63, 63);
     font-weight: normal;
-    font-size:  1.3rem;
+    font-size:  1.2rem;
 
   }
+
+  /* Info Section */
+
+  .info {
+    padding: 120px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .info__container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .info__article {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90%;
+    text-align: left;
+    padding: 0 30px 0 0;
+  }
+  .info__img {
+    height: 450px;
+    margin: 0 auto;
+    text-align: right;
+    padding: 0 0 0 90px;
+  }
+
+  /* Projects Section */
+
+  .projects {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0 0 0;
+    display: flex;
+  }
+  
+  .projects__container {
+    width: 400px;
+    margin: 10px;
+    
+  }
+  .projects__container--img {
+    margin: 10px;
+    justify-content: center;
+    max-height: 400px;
+    width: 400px;
+    padding:  20px  20px 20px 0px;
+  }
+  .projects__container--article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 16px 16px 16px;
+    max-width: 1200px;
+  }
+  .projects__container--title {
+    display: flex;
+    align-items: right;
+    max-width: 1200px;
+    padding: 16px;
+  }
+  .projects__container--feet {
+    display: flex;
+    align-items: right;
+    padding: 16px;
+    max-width: 1200px;
+  }
+
     
   .highlight {
     border-bottom: 4px solid rgb(0, 0, 0);
