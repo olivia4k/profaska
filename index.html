@@ -11,10 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap" rel="stylesheet">
 </head>
-<body onload="slider ()">
+<body class="general">
     <!-- Navbar Section -->
     <nav class="navbar">
-      <div class="navbar__container">
+    <div class="navbar__container">
         <a href="index.html" class="navbar__logo">Justyna Profaska</a>
         <div class="navbar__toggle" id="mobile-menu">
           <span class="bar"></span> <span class="bar"></span>
@@ -34,7 +34,7 @@
             <a href="contact.html" class="navbar__links" id="services-page">Contact</a>
           </li>
         </ul>
-      </div>
+    </div>
     </nav>
 
     <!-- Slideshow Section -->
@@ -45,7 +45,7 @@
       
       <div class="carousel__track-container">
         <ul class="carousel__track">
-          <li class="carousel__slide">
+          <li class="carousel__slide current-slide">
             <img class="carousel__image" src="slide/slide1.jpeg" alt="">
           </li>
           <li class="carousel__slide">
@@ -62,31 +62,11 @@
       </button>
 
       <div class="carousel__nav">
-        <button class="carousel__indicator"></button>
+        <button class="carousel__indicator current-slide"></button>
         <button class="carousel__indicator"></button>
         <button class="carousel__indicator"></button>
       </div>
     </div> 
-
-    <script>
-        var sliderImg = document.getElementById("sliderImg");
-        var slide = new Array(
-            "slide/slide1.jpeg",
-            "slide/slide2.jpeg",
-            "slide/slide3.jpeg"
-        );
-    var len = slide.length;
-    var i = 0;
-
-    function slider () {
-        if(i > len-1) {
-            i = 0;
-        }
-        sliderImg.src = slide[i];
-        i++;
-        setTimeout('slider()',5000);
-    };
-    </script>
     <script src="app.js"></script>
 </body>
 </html>
