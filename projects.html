@@ -14,7 +14,7 @@
 <body>
     <!-- Navbar Section -->
     <nav class="navbar">
-        <div class="navbar__container">
+      <div class="navbar__container">
           <a href="index.html" class="navbar__logo">Justyna Profaska</a>
           <div class="navbar__toggle" id="mobile-menu">
             <span class="bar"></span> <span class="bar"></span>
@@ -34,14 +34,24 @@
               <a href="contact.html" class="navbar__links" id="services-page">Contact</a>
             </li>
           </ul>
-        </div>
+      </div>
       </nav>
         <div class="projects">
-          <div>
-              <img class="projects__container--img" src="projects/project1.jpeg"></img>
+          <div class="carousel__track-container">
+            <ul class="carousel__track">
+              <li class="carousel__slide current-slide">
+                <img class="carousel__image" src="slide/slide1.jpeg" alt="">
+              </li>
+              <li class="carousel__slide">
+                <img class="carousel__image" src="slide/slide2.jpeg" alt="">
+              </li>
+              <li class="carousel__slide">
+                <img class="carousel__image" src="slide/slide3.jpeg" alt="">
+              </li>
+            </ul>
           </div>
           <div>
-              <h1 class="projects__container--title">article title</h1>
+              <h1 class="projects__container--title">Article title</h1>
               <article class="projects__container--article">
               &#8594; Lorem ipsum dolor sit amet. Ut Quis molestiae est galisum blanditiis et fugiat harum aut tenetur quas? Ut accusamus veniam qui dolore perspiciatis non cupiditate omnis in quasi ratione et nihil esse ut temporibus enim.
 
@@ -51,24 +61,23 @@
               </article>
               <i class="projects__container--feet">Rome, 2021</i>
           </div>
-        </div>  
-        <div class="longline"></div>
+        </div> 
         <div class="projects">
           <div>
               <img class="projects__container--img" src="projects/project2.jpeg"></img>
           </div>
-          <div class="projects__container">
-              <div><h1 class="projects__container--title">article title</h1></div>
-              <div><article class="projects__container--article"></div>
+          <div>
+              <h1 class="projects__container--title">Article title</h1>
+              <article class="projects__container--article">
               &#8594; Lorem ipsum dolor sit amet. Ut Quis molestiae est galisum blanditiis et fugiat harum aut tenetur quas? Ut accusamus veniam qui dolore perspiciatis non cupiditate omnis in quasi ratione et nihil esse ut temporibus enim.
 
               Ad fugit explicabo quo voluptatum voluptas aut blanditiis fugiat. Est eligendi aliquid nam dolore voluptate hic eveniet corporis ea odio illum qui maiores accusantium non galisum fugiat eos aspernatur nulla. Et libero debitis ut corporis dignissimos ea officiis minima ex quis temporibus. Et odio laudantium ut totam ratione et tenetur esse est suscipit corporis.
               
               Cum iusto natus qui illo repellat cum consequatur provident ea fuga accusantium? Quo enim inventore id labore voluptas et ipsum ullam.
               </article>
-              <div><i class="projects__container--feet">Rome, 2021</i></div>
+              <i class="projects__container--feet">Rome, 2021</i>
           </div>
         </div>
-      <script src="app.js"></script>
+        <script src="app.js"></script>
 </body>
 </html>
