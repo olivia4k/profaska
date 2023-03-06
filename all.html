@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profaska</title>
+    <link href="normalize.css" rel="stylesheet" type="text/css"/>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <hr class="navbar__line">
+      <div class="navbar__container">
+          <a href="index.html" class="navbar__logo">Profaska</a>
+          <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span> <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="navbar__menu">
+            <li class="navbar__item">
+              <a href="info.html" class="navbar__links" id="home-page">Info</a>
+            
+            </li>
+            <li class="navbar__item">
+              <a href="all.html" class="navbar__links active" id="about-page">All</a>
+              
+            </li>
+            <li class="navbar__item">
+              <a href="research.html" class="navbar__links" id="services-page">Research</a>
+              
+            </li>
+            <li class="navbar__item">
+              <a href="works.html" class="navbar__links" id="services-page">Works</a>
+              
+            </li>
+          </ul>
+      </div>
+      </nav>
+      <hr class="navbar__bottom-line">
+    <!-- All Section -->
+      <div class="wrapper">
+        <div class="wrapper__col">
+          <div class="wrapper__col-1">
+            <img src="assets/research/article collage_website.jpg">
+          </div>
+          <div class="wrapper__col-1">
+            <img src="assets/research/Meta_1.jpeg">
+          </div>
+        </div>
+        <div class="wrapper__col">
+          <div class="wrapper__col-1">
+            <img src="assets/slide/slide2.jpeg">
+          </div>
+          <div class="wrapper__col-1">
+            <img src="assets/slide/slide3.jpeg">
+          </div>
+        </div>
+    <!-- Footer Section -->
+    <div class="footage">
+      <div class="footage__container">
+          <p class="footage__container--menu">profaska.com Copyright © 2023</p>
+          <ul class="footage__container--menu">
+            <li class="footage__container--contact">
+              <p>Contact me!</p>
+            </li>
+            <li class="footage__container--item">
+              <a href="https://www.instagram.com/justaprofaska/" class="footage__container--links"><img href="" src="instagram.svg" alt=""></a>
+            </li>
+            <li class="footage__container--item">
+              <a href="justyna.profaska@gmail.com" class="footage__container--links"><img href="" src="email.svg" alt=""></a>
+            </li>
+          </ul>
+      </div>
+    </div>   
+        <script>
+          //Hamburger
+            const menu = document.querySelector('#mobile-menu');
+            const menuLinks = document.querySelector('.navbar__menu');
+            const navLogo = document.querySelector('#navbar__logo');
+
+            // Display Mobile Menu
+            const mobileMenu = () => {
+              menu.classList.toggle('is-active');
+              menuLinks.classList.toggle('active');
+            };
+
+            menu.addEventListener('click', mobileMenu);
+
+
+
+            //  Close mobile Menu when clicking on a menu item
+            const hideMobileMenu = () => {
+              const menuBars = document.querySelector('.is-active');
+              if (window.innerWidth <= 768 && menuBars) {
+                menu.classList.toggle('is-active');
+                menuLinks.classList.remove('active');
+              }
+            };
+
+            menuLinks.addEventListener('click', hideMobileMenu);
+            navLogo.addEventListener('click', hideMobileMenu);
+        </script>
+</body>
+</html>

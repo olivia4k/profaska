@@ -14,35 +14,66 @@
 <body>
     <!-- Navbar Section -->
     <nav class="navbar">
+      <hr class="navbar__line">
       <div class="navbar__container">
-          <a href="index.html" class="navbar__logo">Justyna Profaska</a>
+          <a href="index.html" class="navbar__logo">Profaska</a>
           <div class="navbar__toggle" id="mobile-menu">
             <span class="bar"></span> <span class="bar"></span>
             <span class="bar"></span>
           </div>
           <ul class="navbar__menu">
             <li class="navbar__item">
-              <a href="info.html" class="navbar__active" id="home-page">Info</a>
+              <a href="info.html" class="navbar__links active" id="home-page">Info</a>
+            
             </li>
             <li class="navbar__item">
-              <a href="writings.html" class="navbar__links" id="about-page">Writings</a>
+              <a href="all.html" class="navbar__links" id="about-page">All</a>
+              
             </li>
             <li class="navbar__item">
-              <a href="projects.html" class="navbar__links" id="services-page">Projects</a>
+              <a href="research.html" class="navbar__links" id="services-page">Research</a>
+              
             </li>
             <li class="navbar__item">
-              <a href="contact.html" class="navbar__links" id="services-page">Contact</a>
+              <a href="works.html" class="navbar__links" id="services-page">Works</a>
+              
             </li>
           </ul>
       </div>
       </nav>
-    <div class="info">
-      <img class="info__img" src="justyna.jpeg"></img>
-      <article class="info__article">Justyna Profaska is a an architect and a PhD Fellow in Landscape and Environment at La Sapienza University of Rome. 
-        Her research focuses on the perception of the space and sense of the community in the digital world. Through 
-        the investigation of simulacrum of landscapes in Virtual Reality, her goal is to understand the impact of new media on the society, 
-        and to more about the meaning of places and its narrative in the current day hyperreality.</article>
-    </div>
+      <hr class="navbar__bottom-line">
+      <!-- info Section -->
+      <div class="info">
+        <div class="info__container-article">
+          <h2 class="info__title">Justyna Profaska</h2>
+          <article class="info__article">Justyna Profaska is a an architect and a PhD Fellow in Landscape and Environment at La Sapienza University of Rome. 
+            Her research focuses on the perception of the space and sense of the community in the digital world. Through 
+            the investigation of simulacrum of landscapes in Virtual Reality, her goal is to understand the impact of new media on the society, 
+            and to more about the meaning of places and its narrative in the current day hyperreality.</article>
+          <h3 class="info__title">Contact</h3>
+          <p class="info__article">justyna.profaska@gmail.com</p>
+          <p class="info__article">Piazza Borghese 9, Rome</p>
+          <hr class="info__line">
+        </div>
+        <div class="info__container-img"></div>
+        <img class="info__img" src="justyna.jpeg"></img>
+      </div>
+      <div class="footage">
+        <div class="footage__container">
+            <p class="footage__container--menu">profaska.com Copyright © 2023</p>
+            <ul class="footage__container--menu">
+              <li class="footage__container--contact">
+                <p>Contact me!</p>
+              </li>
+              <li class="footage__container--item">
+                <a href="https://www.instagram.com/justaprofaska/" class="footage__container--links"><img href="" src="instagram.svg" alt=""></a>
+              </li>
+              <li class="footage__container--item">
+                <a href="justyna.profaska@gmail.com" class="footage__container--links"><img href="" src="email.svg" alt=""></a>
+              </li>
+            </ul>
+        </div>
+      </div>
     <script src="app.js"></script>
 </body>
 </html>

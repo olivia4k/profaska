@@ -7,15 +7,13 @@
     <title>Profaska</title>
     <link href="normalize.css" rel="stylesheet" type="text/css"/>
     <link href="style.css" rel="stylesheet" type="text/css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap" rel="stylesheet">
 </head>
 <body class="general">
     <!-- Navbar Section -->
     <nav class="navbar">
+    <hr class="navbar__line">
     <div class="navbar__container">
-        <a href="index.html" class="navbar__logo navbar__logo--active">Justyna Profaska</a>
+        <a href="index.html" class="navbar__logo">Profaska</a>
         <div class="navbar__toggle" id="mobile-menu">
           <span class="bar"></span> <span class="bar"></span>
           <span class="bar"></span>
@@ -23,36 +21,40 @@
         <ul class="navbar__menu">
           <li class="navbar__item">
             <a href="info.html" class="navbar__links" id="home-page">Info</a>
+          
           </li>
           <li class="navbar__item">
-            <a href="writings.html" class="navbar__links" id="about-page">Writings</a>
+            <a href="all.html" class="navbar__links" id="about-page">All</a>
+            
           </li>
           <li class="navbar__item">
-            <a href="projects.html" class="navbar__links" id="services-page">Projects</a>
+            <a href="research.html" class="navbar__links" id="services-page">Research</a>
+            
           </li>
           <li class="navbar__item">
-            <a href="contact.html" class="navbar__links" id="services-page">Contact</a>
+            <a href="works.html" class="navbar__links" id="services-page">Works</a>
+            
           </li>
         </ul>
     </div>
     </nav>
-
+    <hr class="navbar__bottom-line">
     <!-- Slideshow Section -->
     <div class="carousel">
-      <button class="carousel__button carousel__button--left is-hidden">
+      <button class="carousel__button carousel__button--left">
         <img src="left.svg" alt="">
       </button>
       
       <div class="carousel__track-container">
         <ul class="carousel__track">
           <li class="carousel__slide current-slide">
-            <img class="carousel__image" src="slide/slide1.jpeg" alt="">
+            <img class="carousel__image" src="assets/slide/slide1.jpeg" alt="">
           </li>
           <li class="carousel__slide">
-            <img class="carousel__image" src="slide/slide2.jpeg" alt="">
+            <img class="carousel__image" src="assets/slide/slide2.jpeg" alt="">
           </li>
           <li class="carousel__slide">
-            <img class="carousel__image" src="slide/slide3.jpeg" alt="">
+            <img class="carousel__image" src="assets/slide/slide3.jpeg" alt="">
           </li>
         </ul>
       </div>
@@ -66,7 +68,24 @@
         <button class="carousel__indicator"></button>
         <button class="carousel__indicator"></button>
       </div>
-    </div> 
+    </div>
+    <!-- Footer Section -->
+    <div class="footage">
+      <div class="footage__container">
+          <p class="footage__container--menu">profaska.com Copyright © 2023</p>
+          <ul class="footage__container--menu">
+            <li class="footage__container--contact">
+              <p>Contact me!</p>
+            </li>
+            <li class="footage__container--item">
+              <a href="https://www.instagram.com/justaprofaska/" class="footage__container--links"><img href="" src="instagram.svg" alt=""></a>
+            </li>
+            <li class="footage__container--item">
+              <a href="justyna.profaska@gmail.com" class="footage__container--links"><img href="" src="email.svg" alt=""></a>
+            </li>
+          </ul>
+      </div>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>

@@ -1,3 +1,6 @@
+
+
+
 // Carousel
 
 const track = document.querySelector('.carousel__track');
@@ -30,7 +33,10 @@ slides.forEach((slide,index) => {
 const moveToSlide = (track, currentSlide, targetSlide) => {
   track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
   currentSlide.classList.remove('current-slide');
-  targetSlide.classList.add('current-slide');  
+  targetSlide.classList.add('current-slide'); 
+  //if (currentSlide===slides[slide.length-1]) {
+  //  targetSlide=slides[0];
+  //}
 }
 
 const updateDots = (currentDot, targetDot) => {
@@ -38,18 +44,7 @@ const updateDots = (currentDot, targetDot) => {
   targetDot.classList.add('current-slide');
 }
 
-const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
-  if (targetIndex === 0) {
-    prevButton.classList.add('is-hidden');
-    nextButton.classList.remove('is-hidden');
-  } else if (targetIndex === slides.length -1) {
-    prevButton.classList.remove('is-hidden');
-    nextButton.classList.add('is-hidden');
-  } else {
-    prevButton.classList.remove('is-hidden');
-    nextButton.classList.remove('is-hidden');
-  }
-}
+
 
 
 prevButton.addEventListener('click', e => {
@@ -66,15 +61,25 @@ prevButton.addEventListener('click', e => {
 })
 
 nextButton.addEventListener('click', e => {
-	const currentSlide = track.querySelector('.current-slide');
+
+  const currentSlide = track.querySelector('.current-slide');
 	const nextSlide = currentSlide.nextElementSibling;
   const currentDot = dotsNav.querySelector('.current-slide');
   const nextDot = currentDot.nextElementSibling;
   const nextIndex = slides.findIndex(slide => slide === nextSlide);
 
-  moveToSlide(track, currentSlide, nextSlide);
-  updateDots(currentDot, nextDot);
-  hideShowArrows(slides, prevButton, nextButton, nextIndex);
+  if (currentSlide!=slides[slides.length -1]) {
+    moveToSlide(track, currentSlide, nextSlide);
+    updateDots(currentDot, nextDot);
+    hideShowArrows(slides, prevButton, nextButton, nextIndex);
+  } else {
+    moveToSlide(track, currentSlide, slides[0]);
+    updateDots(currentDot, dots[0]);
+    hideShowArrows(slides, prevButton, nextButton, nextIndex);
+  }
+
+
+  
 
 })
 
@@ -93,13 +98,30 @@ dotsNav.addEventListener('click', e => {
 
   moveToSlide(track,currentSlide, targetSlide);
   updateDots(currentDot, targetDot);
-  hideShowArrows(slides, prevButton, nextButton, targetIndex);
   
 })
 
+//autoplay
 
 
+setInterval(()=> {
+  
+  const currentSlide = track.querySelector('.current-slide');
+  const currentDot   = dotsNav.querySelector('.current-slide');
+  const nextSlide = currentSlide.nextElementSibling;
+  const nextDot = currentDot.nextElementSibling;
 
+  if (currentSlide!=slides[slides.length -1]) {
+    moveToSlide(track, currentSlide, nextSlide);
+    updateDots(currentDot, nextDot);
+    
+  } else {
+    moveToSlide(track, currentSlide, slides[0]);
+    updateDots(currentDot, dots[0]);
+
+  }
+
+},5000)
 
 //Hamburger
 const menu = document.querySelector('#mobile-menu');
