@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profaska</title>
+    <link href="styles/normalize.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <hr class="navbar__line">
+      <div class="navbar__container">
+          <a href="index.html" class="navbar__logo">Profaska</a>
+          <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span> <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="navbar__menu">
+            <li class="navbar__item">
+              <a href="info.html" class="navbar__links" id="home-page">Info</a>
+            
+            </li>
+            <li class="navbar__item">
+              <a href="all.html" class="navbar__links" id="about-page">All</a>
+              
+            </li>
+            <li class="navbar__item">
+              <a href="research.html" class="navbar__links" id="services-page">Research</a>
+              
+            </li>
+            <li class="navbar__item">
+              <a href="works.html" class="navbar__links" id="services-page">Works</a>
+              
+            </li>
+          </ul>
+      </div>
+      </nav>
+      <hr class="navbar__bottom-line">
+      <!-- info Section -->
+      <div class="info">
+        <div class="info__container-article">
+          <h3 class="info__title">META.SPACE</h3>
+          <h2 class="info__subtitle">Visions of Space</h2>
+          <p class="info__contact">Hardcover, 560 pages
+              <br>
+              Editors: Alfred Weidinger, Fabian Müller-Nittel and Markus Reindl / OÖ Landes-Kultur GmbH
+              <br>
+              Article: Design in the Meta.space: A speculative investigation into the spatial perception at the virtual-analog frontier.
+              <br></p>
+          <article class="info__article">
+            The concept of the metaverse, a virtual world that runs parallel to our own and represents the next stage of the internet, has sparked intense 
+            debates since the blockchain craze began. However, the ability to construct and shape worlds by manipulating social, real, and imaginary spaces 
+            has arguably been a crucial aspect of artistic and scientific creativity throughout history. Accompanying an exhibition at the Francisco 
+            Carolinum in Linz, the scientific anthology Meta.space—Visions of Space from the Middle Ages to the Digital Age explores this multifaceted 
+            history from an art-historical perspective. Featuring seventy-five positions in analog, digital, and inter-media art, it provides a foundational
+             contribution to ongoing discussions about the metaverse. The anthology covers a range of topics, including early painterly solutions to 
+             pictorial space problems in the fifteenth century, how works of sculpture create spaces, and the sensory, scholarly, and technological 
+             practices involved in charting spaces. Additionally, the book critically examines the dystopian and utopian potential of cutting-edge metaspace 
+             concepts.
+            If you would like a copy, please order one <a href="https://www.distanz.de/en/metaspace-visions-of-space-from-the-middle-ages-to-the-digital-age">HERE</a> from Distanz<br>
+            <br>
+          </article>
+          <p class="info__contact">Authors: Justyna Profaska, Sara Radi Sayed Ali Ahme, Carmen Armenteros Puchades</p>
+    
+          <hr class="info__line">
+        </div>
+        
+        <div class="carousel-small">
+          <button class="carousel__button carousel__button--left">
+            <img src="assets/svg-icons/left.svg" alt="">
+          </button>
+          <div class="carousel-small__track-container-small">
+            <ul class="carousel__track">
+              <li class="carousel__slide current-slide">
+                <img class="carousel__image" src="assets/metaspace/Meta_1.jpeg" alt="">
+              </li>
+              <li class="carousel__slide">
+                <img class="carousel__image" src="assets/metaspace/Meta2.jpeg" alt="">
+              </li>
+              <li class="carousel__slide">
+                <img class="carousel__image" src="assets/metaspace/meta3.jpeg" alt="">
+              </li>
+              <li class="carousel__slide">
+                <img class="carousel__image" src="assets/metaspace/meta4.jpeg" alt="">
+              </li>
+              <li class="carousel__slide">
+                <img class="carousel__image" src="assets/metaspace/meta7.jpeg" alt="">
+              </li>
+            </ul>
+          </div>
+          <button class="carousel__button carousel__button--right">
+            <img src="assets/svg-icons/right.svg" alt="">
+          </button>
+        </div>
+      </div>
+      <div class="footage">
+        <div class="footage__container">
+            <p class="footage__container--menu">profaska.com Copyright © 2023</p>
+            <ul class="footage__container--menu">
+              <li class="footage__container--contact">
+                <p>Contact me</p>
+              </li>
+              <li class="footage__container--item">
+                <a href="https://www.instagram.com/justaprofaska/" class="footage__container--links"><img href="" src="assets/svg-icons/instagram.svg" alt=""></a>
+              </li>
+              <li class="footage__container--item">
+                <a href="mailto: justyna.profaska@gmail.com" class="footage__container--links"><img href="" src="assets/svg-icons/email.svg" alt=""></a>
+              </li>
+            </ul>
+        </div>
+      </div>
+      <script src="meta-space.js"></script>
+      <script>
+        //Hamburger
+          const menu = document.querySelector('#mobile-menu');
+          const menuLinks = document.querySelector('.navbar__menu');
+          const navLogo = document.querySelector('#navbar__logo');
+  
+          // Display Mobile Menu
+          const mobileMenu = () => {
+            menu.classList.toggle('is-active');
+            menuLinks.classList.toggle('active');
+          };
+  
+          menu.addEventListener('click', mobileMenu);
+
+      </script>
+      
+</body>
+</html>

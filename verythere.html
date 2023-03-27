@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profaska</title>
+    <link href="styles/normalize.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <hr class="navbar__line">
+      <div class="navbar__container">
+          <a href="index.html" class="navbar__logo">Profaska</a>
+          <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span> <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="navbar__menu">
+            <li class="navbar__item">
+              <a href="info.html" class="navbar__links" id="home-page">Info</a>
+            
+            </li>
+            <li class="navbar__item">
+              <a href="all.html" class="navbar__links" id="about-page">All</a>
+              
+            </li>
+            <li class="navbar__item">
+              <a href="research.html" class="navbar__links" id="services-page">Research</a>
+              
+            </li>
+            <li class="navbar__item">
+              <a href="works.html" class="navbar__links" id="services-page">Works</a>
+              
+            </li>
+          </ul>
+      </div>
+      </nav>
+      <hr class="navbar__bottom-line">
+      <!-- info Section -->
+      <div class="info">
+        <div class="info__container-article">
+          <h2 class="info__title">verythere</h2>
+          <article class="info__article">
+            In today's age of multitasking, proposing mindfulness as a solution to dispersion requires reevaluation. While the idea of living parallel lives in
+            different places is recurrent state in history of human behaviour, from maintenance of love affairs to schizophrenia, there's no clear guidance on how 
+            to focus on both the real and virtual world or how to maintain healthy ways of being in multiple places simultaneously. However, there is no guidance 
+            on how to focus on both the real and virtual world or how to practice healthy forms of being in multiple places simultaneously. What would happen if we
+            practiced focus, presence, and understanding in multiple places at the same time? The idea emerged from the acknowledgment that in today's world, it 
+            is impossible to be fully present in one place all the time because of the way epigenetic influences the split of our brains and changes in our neurons.
+            Dimitris Papadopoulos, in his essay "Plastic Brain," suggests that "Every epoch has its brain - and every epoch fantasies a better brain than the one it 
+            has," and the importance of the human task is to understand where and how these processes can influence our thinking, embodiment, and focus. How can we 
+            find a way to enjoy focused, simultaneous micro-experiences here and there ( and all at once, as the concept of the multiverse is gaining 
+            attention and provoking debates)?
+            <br>
+          </article>
+          <p class="info__contact">Author: Justyna Profaska<br>
+            research, 2022 - ongoing <br></p>
+          
+    
+          <hr class="info__line">
+        </div>
+        <div class="info__container-img"></div>
+        <img class="info__img" src="assets/verythere/OBRAZEK PROJEKT.jpg" alt=" "></img>
+      </div>
+      <div class="footage">
+        <div class="footage__container">
+            <p class="footage__container--menu">profaska.com Copyright © 2023</p>
+            <ul class="footage__container--menu">
+              <li class="footage__container--contact">
+                <p>Contact me</p>
+              </li>
+              <li class="footage__container--item">
+                <a href="https://www.instagram.com/justaprofaska/" class="footage__container--links"><img href="" src="assets/svg-icons/instagram.svg" alt=""></a>
+              </li>
+              <li class="footage__container--item">
+                <a href="justyna.profaska@gmail.com" class="footage__container--links"><img href="" src="assets/svg-icons/email.svg" alt=""></a>
+              </li>
+            </ul>
+        </div>
+      </div>
+      <script>
+        //Hamburger
+          const menu = document.querySelector('#mobile-menu');
+          const menuLinks = document.querySelector('.navbar__menu');
+          const navLogo = document.querySelector('#navbar__logo');
+  
+          // Display Mobile Menu
+          const mobileMenu = () => {
+            menu.classList.toggle('is-active');
+            menuLinks.classList.toggle('active');
+          };
+  
+          menu.addEventListener('click', mobileMenu);
+
+      </script>
+</body>
+</html>

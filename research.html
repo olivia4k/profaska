@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profaska</title>
-    <link href="normalize.css" rel="stylesheet" type="text/css"/>
-    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/normalize.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/style.css" rel="stylesheet" type="text/css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap" rel="stylesheet">
@@ -31,7 +31,7 @@
               
             </li>
             <li class="navbar__item">
-              <a href="research.html" class="navbar__links" id="services-page">Research</a>
+              <a href="research.html" class="navbar__links active-link" id="services-page">Research</a>
               
             </li>
             <li class="navbar__item">
@@ -46,15 +46,18 @@
       <div class="wrapper">
         <div class="wrapper__col">
           <div class="wrapper__col-1">
-            <img src="assets/research/article collage_website.jpg">
+            <img src="assets/vl-thesis/Virtual Landscapes_Thesis .jpg">
+            <a href="v-l-thesis.html"><h3>virtual landscapes thesis</h3></a>
           </div>
           <div class="wrapper__col-1">
-            <img src="assets/research/Meta_1.jpeg">
+            <img src="assets/verythere/OBRAZEK PROJEKT.jpg">
+            <a href="verythere.html"><h3>verythere</h3></a>
           </div>
         </div>
         <div class="wrapper__col">
           <div class="wrapper__col-1">
-            <img src="assets/slide/slide2.jpeg">
+            <img src="assets/on -virtuality-of-the-country-side/Trees.jpg">
+            <a href="on-virtuality-of-the-country-side.html"><h3>on virtuality of the country side</h3></a>
           </div>
           <div class="wrapper__col-1">
             
@@ -67,17 +70,42 @@
           <p class="footage__container--menu">profaska.com Copyright © 2023</p>
           <ul class="footage__container--menu">
             <li class="footage__container--contact">
-              <p>Contact me!</p>
+              <p>Contact me</p>
             </li>
             <li class="footage__container--item">
-              <a href="https://www.instagram.com/justaprofaska/" class="footage__container--links"><img href="" src="instagram.svg" alt=""></a>
+              <a href="https://www.instagram.com/justaprofaska/" class="footage__container--links"><img href="" src="assets/svg-icons/instagram.svg" alt=""></a>
             </li>
             <li class="footage__container--item">
-              <a href="justyna.profaska@gmail.com" class="footage__container--links"><img href="" src="email.svg" alt=""></a>
+              <a href="mailto: justyna.profaska@gmail.com" class="footage__container--links"><img href="" src="assets/svg-icons/email.svg" alt=""></a>
             </li>
           </ul>
       </div>
     </div>
-      <script src="app.js"></script>
+    <script>
+      //Hamburger
+      const menu = document.querySelector("#mobile-menu");
+      const menuLinks = document.querySelector(".navbar__menu");
+      const navLogo = document.querySelector("#navbar__logo");
+
+      // Display Mobile Menu
+      const mobileMenu = () => {
+        menu.classList.toggle("is-active");
+        menuLinks.classList.toggle("active");
+      };
+
+      menu.addEventListener("click", mobileMenu);
+
+      //  Close mobile Menu when clicking on a menu item
+      const hideMobileMenu = () => {
+        const menuBars = document.querySelector(".is-active");
+        if (window.innerWidth <= 768 && menuBars) {
+          menu.classList.toggle("is-active");
+          menuLinks.classList.remove("active");
+        }
+      };
+
+      menuLinks.addEventListener("click", hideMobileMenu);
+      navLogo.addEventListener("click", hideMobileMenu);
+    </script>
 </body>
 </html>

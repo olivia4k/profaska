@@ -23,7 +23,7 @@
           </div>
           <ul class="navbar__menu">
             <li class="navbar__item">
-              <a href="info.html" class="navbar__links active-link" id="home-page">Info</a>
+              <a href="info.html" class="navbar__links" id="home-page">Info</a>
             
             </li>
             <li class="navbar__item">
@@ -45,18 +45,22 @@
       <!-- info Section -->
       <div class="info">
         <div class="info__container-article">
-          <h2 class="info__title">Justyna Profaska</h2>
-          <article class="info__article">Justyna Profaska is an architect and a PhD Fellow in Landscape and Environment at La Sapienza University of Rome. Her research focuses on the perception of space in digital worlds. Through the investigation of landscape and its representation, her goal is to understand the impact of the internet, new media, and virtual reality on humans, as well as new narratives on the landscape.
-            She graduated in 2020 from Poznan University of Technology and studied architecture at the Karlsruhe Institute of Technology and Sapienza University of Rome. During her studies, she worked in the architecture and construction fields in Berlin. She gained international experience working in architecture and design research in Germany, Poland, and Italy. In 2021, she worked as an architect at Studio Fuksas in Rome.
-            During the academic year 2021/2022, she collaborated on the didactics at the Laboratory of Architectural Design III with Prof. Alfonso Giancotti. In 2023, she will assist Prof. Benedetta Di Donato with the course 'Theories of Contemporary Landscape'. Currently, she is a fellow of Ph.D. research in Landscape and Environment in the Architecture Department at Sapienza University of Rome, where she continues her thesis on virtual landscapes.<br><br>
+          <h2 class="info__title">On Virtuality of the Countryside</h2>
+          <article class="info__article">How has the iconography of the countryside, as portrayed in arts, digital media, and social media, changed human perception 
+            of rural areas? The ubiquitous images of rural areas are generating interest and creating a narrative of leisure, peace, and otium. Secluded spas, 
+            digital detoxes, and the romanticization of life in the countryside have idealized it, turning it into a simulacrum. The virtual representation of the 
+            village is seducing people with its enhanced reality. What is the reason for this cult of the image of the countryside? This research examines 
+            the relationship between technology, art, and rural areas.<br>
+            <p class="info__contact">author: Justyna Profaska<br>
+            reaserch, 2023-ongoing</p>
+            <br>
           </article>
-          <p class="info__contact">Contact for information:<br>justyna.profaska@gmail.com</p>
-          <p class="info__contact">Adress:
-          <br>Piazza Borghese 9, Rome</p>
+    
+    
           <hr class="info__line">
         </div>
-        <div class="info__container-img">
-        <img class="info__img" src="assets/info/Justa 1.jpg" alt=" "></img></div>
+        <div class="info__container-img"></div>
+        <img class="info__img" src="assets/on -virtuality-of-the-country-side/Trees.jpg" alt=" "></img>
       </div>
       <div class="footage">
         <div class="footage__container">
@@ -75,27 +79,19 @@
         </div>
       </div>
       <script>
-        const menu = document.querySelector("#mobile-menu");
-        const menuLinks = document.querySelector(".navbar__menu");
-        const navLogo = document.querySelector("#navbar__logo");
-
-        const mobileMenu = () => {
-          menu.classList.toggle("is-active");
-          menuLinks.classList.toggle("active");
-        };
+        //Hamburger
+          const menu = document.querySelector('#mobile-menu');
+          const menuLinks = document.querySelector('.navbar__menu');
+          const navLogo = document.querySelector('#navbar__logo');
   
-        menu.addEventListener("click", mobileMenu);
-
-        const hideMobileMenu = () => {
-          const menuBars = document.querySelector(".is-active");
-          if (window.innerWidth <= 768 && menuBars) {
-            menu.classList.toggle("is-active");
-            menuLinks.classList.remove("active");
-          }
-        };
+          // Display Mobile Menu
+          const mobileMenu = () => {
+            menu.classList.toggle('is-active');
+            menuLinks.classList.toggle('active');
+          };
   
-        menuLinks.addEventListener("click", hideMobileMenu);
-        navLogo.addEventListener("click", hideMobileMenu);
+          menu.addEventListener('click', mobileMenu);
+
       </script>
 </body>
 </html>

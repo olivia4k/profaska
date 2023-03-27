@@ -23,7 +23,7 @@
           </div>
           <ul class="navbar__menu">
             <li class="navbar__item">
-              <a href="info.html" class="navbar__links active-link" id="home-page">Info</a>
+              <a href="info.html" class="navbar__links" id="home-page">Info</a>
             
             </li>
             <li class="navbar__item">
@@ -45,18 +45,26 @@
       <!-- info Section -->
       <div class="info">
         <div class="info__container-article">
-          <h2 class="info__title">Justyna Profaska</h2>
-          <article class="info__article">Justyna Profaska is an architect and a PhD Fellow in Landscape and Environment at La Sapienza University of Rome. Her research focuses on the perception of space in digital worlds. Through the investigation of landscape and its representation, her goal is to understand the impact of the internet, new media, and virtual reality on humans, as well as new narratives on the landscape.
-            She graduated in 2020 from Poznan University of Technology and studied architecture at the Karlsruhe Institute of Technology and Sapienza University of Rome. During her studies, she worked in the architecture and construction fields in Berlin. She gained international experience working in architecture and design research in Germany, Poland, and Italy. In 2021, she worked as an architect at Studio Fuksas in Rome.
-            During the academic year 2021/2022, she collaborated on the didactics at the Laboratory of Architectural Design III with Prof. Alfonso Giancotti. In 2023, she will assist Prof. Benedetta Di Donato with the course 'Theories of Contemporary Landscape'. Currently, she is a fellow of Ph.D. research in Landscape and Environment in the Architecture Department at Sapienza University of Rome, where she continues her thesis on virtual landscapes.<br><br>
+          <h3 class="info__subtitle">Paessaggio Inclusione</h3>
+          <h2 class="info__title">THE EXCLUSIVE COLLECTIVE LANDSCAPE</h2>
+          <article class="info__article">Virtual reality technologies have the potential to offer an infinite number of highly desirable landscapes and environments 
+            that can continue to evolve over time. The benefits of virtual landscapes lie in the level of control and customisation they provide, which is not 
+            possible in the real world. This allows for experimentation with different environments and scenarios, and the creation of experiences that would be 
+            impossible or impractical in the physical world, 
+            or inaccessible to people living in certain geographical locations or within certain social classes.
+            The paper focuses on understanding the psychology behind what makes certain landscapes exclusive and explores how technology can make 
+            experiences that were previously only available to select individuals - more accessible to everyone. A modern inclusive landscape must present an 
+            innovative idea, deriving from the concept of an open-access network to exclusive landscapes. How can we reinvent the notion of an inclusive landscape 
+            that simultaneously creates a sense of exceptionality and uniqueness? The text discusses the experience of the landscape through the technology of 
+            virtual reality and the possibilities it offers.<br>
+            <br>
           </article>
-          <p class="info__contact">Contact for information:<br>justyna.profaska@gmail.com</p>
-          <p class="info__contact">Adress:
-          <br>Piazza Borghese 9, Rome</p>
+          <p class="info__contact">author: Justyna Profaska, 2022</p>
+    
           <hr class="info__line">
         </div>
-        <div class="info__container-img">
-        <img class="info__img" src="assets/info/Justa 1.jpg" alt=" "></img></div>
+        <div class="info__container-img"></div>
+        <img class="info__img" src="assets/exclusive-collective-landscape/Collage photo.jpg" alt=" "></img>
       </div>
       <div class="footage">
         <div class="footage__container">
@@ -75,27 +83,19 @@
         </div>
       </div>
       <script>
-        const menu = document.querySelector("#mobile-menu");
-        const menuLinks = document.querySelector(".navbar__menu");
-        const navLogo = document.querySelector("#navbar__logo");
-
-        const mobileMenu = () => {
-          menu.classList.toggle("is-active");
-          menuLinks.classList.toggle("active");
-        };
+        //Hamburger
+          const menu = document.querySelector('#mobile-menu');
+          const menuLinks = document.querySelector('.navbar__menu');
+          const navLogo = document.querySelector('#navbar__logo');
   
-        menu.addEventListener("click", mobileMenu);
-
-        const hideMobileMenu = () => {
-          const menuBars = document.querySelector(".is-active");
-          if (window.innerWidth <= 768 && menuBars) {
-            menu.classList.toggle("is-active");
-            menuLinks.classList.remove("active");
-          }
-        };
+          // Display Mobile Menu
+          const mobileMenu = () => {
+            menu.classList.toggle('is-active');
+            menuLinks.classList.toggle('active');
+          };
   
-        menuLinks.addEventListener("click", hideMobileMenu);
-        navLogo.addEventListener("click", hideMobileMenu);
+          menu.addEventListener('click', mobileMenu);
+
       </script>
 </body>
 </html>
