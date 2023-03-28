@@ -149,14 +149,14 @@ $myblue: #001aff;
     z-index: 999;
     top: 50%;
     transform: translateY(-50%);
-    height: 100px;
-    background: rgba(0, 0, 0, 0.116);
+    height: 90px;
+    background: rgba(0, 0, 0, 0.068);
     border-radius: 5px;
     border: none;
     cursor: pointer;
   }
   &__button--left {
-    left: 20px;
+    left: 30px;
   }
   &__button--left img {
     width: 80px;
@@ -164,7 +164,7 @@ $myblue: #001aff;
     filter: brightness(0) invert(1);
   }
   &__button--right {
-    right: 20px;
+    right: 30px;
   }
   &__button--right img {
     width: 80px;
@@ -177,13 +177,13 @@ $myblue: #001aff;
   justify-content: center;
   padding: 20px 0;
   width: 100%;
+  transform: translateY(-80px);
 }
 .carousel__indicator {
-  transform: translateY(-80px);
-  outline: 3px solid #ffffff;
+  
   border: none;
   border-radius: 50%;
-  background: none;
+  background: #a8a8a89c;
   width: 14px;
   height: 14px;
   margin: 0 12px;
@@ -230,10 +230,9 @@ $myblue: #001aff;
       font-weight: bold;
     }
     &--item {
-      font-size: 1.1rem;
-      text-transform: capitalize;
-      text-transform: uppercase;
       list-style: none;
+      padding: 10px 0 10px 0;
+      align-items: center;
     }
     &--contact {
       font-size: 1.1rem;
@@ -394,7 +393,50 @@ $myblue: #001aff;
 @media screen and (max-width: 960px) {
   .info {
     display: block;
-    padding: 0 16px 0 16px;
+    padding: 0;
+    height: auto;
+    &__container-article{
+      width: 100%;
+      padding: 10px;
+    } 
+    &__img {
+      margin-bottom: 100px;
+      width: 100%;
+      height: auto;
+      padding: 20px;
+    }
+    
+  }
+  .carousel {
+    &__button {
+      position: absolute;
+      z-index: 999;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 50px;
+      background: rgba(0, 0, 0, 0.068);
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    }
+    &__button--left {
+      left: 35px;
+    }
+    &__button--left img {
+      width: 40px;
+      height: 40px;
+    }
+    &__button--right {
+      right: 35px;
+    }
+    &__button--right img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .carousel-small {
+    width: 100%;
   }
 
   .navbar__container {
@@ -424,7 +466,7 @@ $myblue: #001aff;
     flex-direction: column;
     justify-content: right;
     align-items: flex-end;
-    background: #ffffffdc;
+    background: #ffffffea;
     width: 100%;
     position: absolute;
     top: 65px;
@@ -464,6 +506,13 @@ $myblue: #001aff;
     width: 100%;
     
   }
+  .footage__container--menu {
+    font-size: 12px;
+  }
+  .footage__container--item {
+    padding: 10px 0 10px 5px;
+    font-size: 13px;
+  }
   .wrapper {
   
     &__col {
@@ -500,6 +549,7 @@ $myblue: #001aff;
   }
   .footage__container--menu {
     padding: 20px;
+    font-size: 15px;
 
   }
 

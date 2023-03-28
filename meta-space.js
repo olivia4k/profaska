@@ -1,4 +1,6 @@
 // Carousel
+
+
 console.log('olivia');
 
 const track = document.querySelector('.carousel__track');
@@ -48,6 +50,26 @@ prevButton.addEventListener('click', e => {
   moveToSlide(track, currentSlide, prevSlide);
 
 })
+//autoplay
+const Autoplay = () => {
+  
+  const currentSlide = track.querySelector('.current-slide');
+  const currentDot   = dotsNav.querySelector('.current-slide');
+  const nextSlide = currentSlide.nextElementSibling;
+  const nextDot = currentDot.nextElementSibling;
+
+  if (currentSlide!=slides[slides.length -1]) {
+    moveToSlide(track, currentSlide, nextSlide);
+    updateDots(currentDot, nextDot);
+    
+  } else {
+    moveToSlide(track, currentSlide, slides[0]);
+    updateDots(currentDot, dots[0]);
+
+  }
+}
+
+var autoplayIntervalId = setInterval(Autoplay, 5000); 
 
 nextButton.addEventListener('click', e => {
 
@@ -58,11 +80,9 @@ nextButton.addEventListener('click', e => {
   if (currentSlide!=slides[slides.length -1]) {
     moveToSlide(track, currentSlide, nextSlide);
     updateDots(currentDot, nextDot);
-    hideShowArrows(slides, prevButton, nextButton, nextIndex);
   } else {
     moveToSlide(track, currentSlide, slides[0]);
     updateDots(currentDot, dots[0]);
-    hideShowArrows(slides, prevButton, nextButton, nextIndex);
   }
 
 
@@ -71,23 +91,5 @@ nextButton.addEventListener('click', e => {
 })
 
 
-//autoplay
 
 
-setInterval(()=> {
-  
-  const currentSlide = track.querySelector('.current-slide');
-  const nextSlide = currentSlide.nextElementSibling;
-
-  if (currentSlide!=slides[slides.length -1]) {
-    moveToSlide(track, currentSlide, nextSlide);
-    
-    
-  } else {
-    moveToSlide(track, currentSlide, slides[0]);
-    
-
-  }
-
-
-},5000)

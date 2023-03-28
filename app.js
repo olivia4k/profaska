@@ -1,6 +1,4 @@
 
-
-
 // Carousel
 
 const track = document.querySelector('.carousel__track');
@@ -32,11 +30,9 @@ slides.forEach((slide,index) => {
 
 const moveToSlide = (track, currentSlide, targetSlide) => {
   track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+  track.style.transition=" all 2s" 
   currentSlide.classList.remove('current-slide');
   targetSlide.classList.add('current-slide'); 
-  //if (currentSlide===slides[slide.length-1]) {
-  //  targetSlide=slides[0];
-  //}
 }
 
 const updateDots = (currentDot, targetDot) => {
@@ -44,6 +40,27 @@ const updateDots = (currentDot, targetDot) => {
   targetDot.classList.add('current-slide');
 }
 
+//autoplay
+
+const Autoplay = () => {
+  
+  const currentSlide = track.querySelector('.current-slide');
+  const currentDot   = dotsNav.querySelector('.current-slide');
+  const nextSlide = currentSlide.nextElementSibling;
+  const nextDot = currentDot.nextElementSibling;
+
+  if (currentSlide!=slides[slides.length -1]) {
+    moveToSlide(track, currentSlide, nextSlide);
+    updateDots(currentDot, nextDot);
+    
+  } else {
+    moveToSlide(track, currentSlide, slides[0]);
+    updateDots(currentDot, dots[0]);
+
+  }
+}
+
+var autoplayIntervalId = setInterval(Autoplay, 5000); 
 
 
 
@@ -54,9 +71,15 @@ prevButton.addEventListener('click', e => {
   const prevDot = currentDot.previousElementSibling;
   const prevIndex = slides.findIndex(slide => slide === prevSlide);
 
+  if (autoplayIntervalId) {
+    clearInterval(autoplayIntervalId);
+    autoplayIntervalId = false;
+  }
+
+  setInterval(Autoplay, 9000);
+
   moveToSlide(track, currentSlide, prevSlide);
   updateDots(currentDot, prevDot);
-  hideShowArrows(slides, prevButton, nextButton, prevIndex);
 
 })
 
@@ -68,18 +91,23 @@ nextButton.addEventListener('click', e => {
   const nextDot = currentDot.nextElementSibling;
   const nextIndex = slides.findIndex(slide => slide === nextSlide);
 
+  if (autoplayIntervalId) {
+    clearInterval(autoplayIntervalId);
+    autoplayIntervalId = false;
+  }
+
+  setInterval(Autoplay, 9000);
+  
+
+
   if (currentSlide!=slides[slides.length -1]) {
     moveToSlide(track, currentSlide, nextSlide);
     updateDots(currentDot, nextDot);
-    hideShowArrows(slides, prevButton, nextButton, nextIndex);
   } else {
     moveToSlide(track, currentSlide, slides[0]);
     updateDots(currentDot, dots[0]);
-    hideShowArrows(slides, prevButton, nextButton, nextIndex);
   }
 
-
-  
 
 })
 
@@ -101,28 +129,11 @@ dotsNav.addEventListener('click', e => {
   
 })
 
-//autoplay
 
 
-setInterval(()=> {
-  
-  const currentSlide = track.querySelector('.current-slide');
-  const currentDot   = dotsNav.querySelector('.current-slide');
-  const nextSlide = currentSlide.nextElementSibling;
-  const nextDot = currentDot.nextElementSibling;
-
-  if (currentSlide!=slides[slides.length -1]) {
-    moveToSlide(track, currentSlide, nextSlide);
-    updateDots(currentDot, nextDot);
-    
-  } else {
-    moveToSlide(track, currentSlide, slides[0]);
-    updateDots(currentDot, dots[0]);
-
-  }
 
 
-},5000)
+
 
 //Hamburger
 const menu = document.querySelector('#mobile-menu');
@@ -136,8 +147,6 @@ const mobileMenu = () => {
 };
 
 menu.addEventListener('click', mobileMenu);
-
-
 
 //  Close mobile Menu when clicking on a menu item
 const hideMobileMenu = () => {
