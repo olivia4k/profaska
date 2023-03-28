@@ -71,12 +71,11 @@ prevButton.addEventListener('click', e => {
   const prevDot = currentDot.previousElementSibling;
   const prevIndex = slides.findIndex(slide => slide === prevSlide);
 
-  if (autoplayIntervalId) {
-    clearInterval(autoplayIntervalId);
-    autoplayIntervalId = false;
-  }
 
-  setInterval(Autoplay, 9000);
+  clearInterval(autoplayIntervalId);
+  autoplayIntervalId = setInterval(Autoplay, 9000);
+
+
 
   moveToSlide(track, currentSlide, prevSlide);
   updateDots(currentDot, prevDot);
@@ -91,12 +90,8 @@ nextButton.addEventListener('click', e => {
   const nextDot = currentDot.nextElementSibling;
   const nextIndex = slides.findIndex(slide => slide === nextSlide);
 
-  if (autoplayIntervalId) {
-    clearInterval(autoplayIntervalId);
-    autoplayIntervalId = false;
-  }
-
-  setInterval(Autoplay, 9000);
+  clearInterval(autoplayIntervalId);
+  autoplayIntervalId = setInterval(Autoplay, 9000);
   
 
 

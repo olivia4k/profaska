@@ -65,6 +65,9 @@ prevButton.addEventListener('click', e => {
 
   moveToSlide(track, currentSlide, prevSlide);
 
+  clearInterval(autoplayIntervalId);
+  autoplayIntervalId = setInterval(Autoplay, 9000);
+
 })
 
 
@@ -80,13 +83,8 @@ nextButton.addEventListener('click', e => {
     moveToSlide(track, currentSlide, slides[0]);
   }
 
-  if (autoplayIntervalId) {
-    clearInterval(autoplayIntervalId);
-    autoplayIntervalId = false;
-  }
-
-  setInterval(Autoplay, 9000);
-
+  clearInterval(autoplayIntervalId);
+  autoplayIntervalId = setInterval(Autoplay, 9000);
   
 
 })
