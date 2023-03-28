@@ -30,6 +30,7 @@ slides.forEach((slide,index) => {
 
 const moveToSlide = (track, currentSlide, targetSlide) => {
   track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+  track.style.transition=" all 2s"
   currentSlide.classList.remove('current-slide');
   targetSlide.classList.add('current-slide'); 
   //if (currentSlide===slides[slide.length-1]) {
@@ -37,7 +38,22 @@ const moveToSlide = (track, currentSlide, targetSlide) => {
   //}
 }
 
+//autoplay
+const Autoplay = () => {
+  
+  const currentSlide = track.querySelector('.current-slide');
+  const nextSlide = currentSlide.nextElementSibling;
 
+  if (currentSlide!=slides[slides.length -1]) {
+    moveToSlide(track, currentSlide, nextSlide);
+    
+  } else {
+    moveToSlide(track, currentSlide, slides[0]);
+
+  }
+
+}
+var autoplayIntervalId = setInterval(Autoplay, 5000); 
 
 
 
@@ -50,26 +66,7 @@ prevButton.addEventListener('click', e => {
   moveToSlide(track, currentSlide, prevSlide);
 
 })
-//autoplay
-const Autoplay = () => {
-  
-  const currentSlide = track.querySelector('.current-slide');
-  const currentDot   = dotsNav.querySelector('.current-slide');
-  const nextSlide = currentSlide.nextElementSibling;
-  const nextDot = currentDot.nextElementSibling;
 
-  if (currentSlide!=slides[slides.length -1]) {
-    moveToSlide(track, currentSlide, nextSlide);
-    updateDots(currentDot, nextDot);
-    
-  } else {
-    moveToSlide(track, currentSlide, slides[0]);
-    updateDots(currentDot, dots[0]);
-
-  }
-}
-
-var autoplayIntervalId = setInterval(Autoplay, 5000); 
 
 nextButton.addEventListener('click', e => {
 
@@ -79,12 +76,16 @@ nextButton.addEventListener('click', e => {
 
   if (currentSlide!=slides[slides.length -1]) {
     moveToSlide(track, currentSlide, nextSlide);
-    updateDots(currentDot, nextDot);
   } else {
     moveToSlide(track, currentSlide, slides[0]);
-    updateDots(currentDot, dots[0]);
   }
 
+  if (autoplayIntervalId) {
+    clearInterval(autoplayIntervalId);
+    autoplayIntervalId = false;
+  }
+
+  setInterval(Autoplay, 9000);
 
   
 
