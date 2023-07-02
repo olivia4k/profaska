@@ -10,7 +10,7 @@ $myblue: #001aff;
 
 .navbar {
   z-index: 999;
-  height: 110px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,19 +28,19 @@ $myblue: #001aff;
   }
   &__bottom-line {
     position: absolute;
-    top: 110px;
+    top: 100px;
     width: 100%;
     z-index: 999;
     border: 2px solid blue;
   }
   &__container {
-    transform: translateY(30px);
+    transform: translateY(20px);
     display: flex;
     justify-content: space-between;
     height: 40px;
     z-index: 1;
     width: 1300px;
-    padding: 0;
+    padding: 10px;
   }
   &__menu {
     display: flex;
@@ -109,7 +109,7 @@ $myblue: #001aff;
 .carousel {
   position: relative;
   z-index: 0;
-  height: 75vh;
+  height: 80vh;
   width: 100%;
   margin: 0 auto;
   &__image {
@@ -149,26 +149,26 @@ $myblue: #001aff;
     z-index: 999;
     top: 50%;
     transform: translateY(-50%);
-    height: 90px;
+    height: 60px;
     background: rgba(0, 0, 0, 0.068);
     border-radius: 5px;
     border: none;
     cursor: pointer;
   }
   &__button--left {
-    left: 30px;
+    left: 32px;
   }
   &__button--left img {
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     filter: brightness(0) invert(1);
   }
   &__button--right {
-    right: 30px;
+    right: 32px;
   }
   &__button--right img {
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     filter: invert(1);
   }
 }
@@ -200,7 +200,7 @@ $myblue: #001aff;
   background: #ffffff;
   position: fixed;
   bottom: 0;
-  height: 50px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -219,7 +219,8 @@ $myblue: #001aff;
     width: 100%;
     max-width: 1300px;
     margin: 0 auto;
-    padding: 0;
+    padding: 10px;
+    align-items: center;
     &--menu {
       display: flex;
       align-items: center;
@@ -338,7 +339,7 @@ $myblue: #001aff;
     height: 38vh;
   }
   &__col-1 {
-    flex-basis: 100%;
+    width: 50%;
     padding: 0;
     cursor: pointer;
     
@@ -391,6 +392,9 @@ $myblue: #001aff;
 }
 
 @media screen and (max-width: 960px) {
+  .mobile-unvisible {
+    display: none;
+  }
   .info {
     display: block;
     padding: 0;
@@ -464,7 +468,7 @@ $myblue: #001aff;
   .active {
     display: flex;
     flex-direction: column;
-    justify-content: right;
+    justify-content: center;
     align-items: flex-end;
     background: #ffffffea;
     width: 100%;
@@ -496,22 +500,27 @@ $myblue: #001aff;
   }
 
   .navbar__links {
-    justify-content: center;
-    padding: 80px;
+    justify-content: flex-start;
+    padding: 25px;
     width: 100%;
   }
   .active-link {
-    justify-content: center;
-    padding: 80px;
     width: 100%;
     
   }
+  .footage {
+    padding: 0;
+  }
   .footage__container--menu {
-    font-size: 12px;
+    padding: 0px;
+    font-size: 13px;
   }
   .footage__container--item {
-    padding: 10px 0 10px 5px;
     font-size: 13px;
+  }
+  .footage__container--links {
+    font-size: 13px;
+    padding: 4px;
   }
   .wrapper {
   
@@ -522,6 +531,7 @@ $myblue: #001aff;
     }
     &__col-1 {
       height: 50vh;
+      width: 100%;
       h3 {
         display: flex;
         z-index: 999;
@@ -547,11 +557,7 @@ $myblue: #001aff;
   .navbar__btn {
     padding-bottom: 2rem;
   }
-  .footage__container--menu {
-    padding: 20px;
-    font-size: 15px;
-
-  }
+  
 
   #mobile-menu {
     position: absolute;
