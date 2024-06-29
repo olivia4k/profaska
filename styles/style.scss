@@ -103,7 +103,6 @@ $myblue: #001aff;
     margin: 30px;
     position: relative;
     overflow: hidden;
-
   }
 }
 .carousel {
@@ -129,7 +128,7 @@ $myblue: #001aff;
     position: relative;
     overflow: hidden;
   }
-  
+
   &__track {
     padding: 0;
     margin: 0;
@@ -180,7 +179,6 @@ $myblue: #001aff;
   transform: translateY(-80px);
 }
 .carousel__indicator {
-  
   border: none;
   border-radius: 50%;
   background: #a8a8a89c;
@@ -192,7 +190,6 @@ $myblue: #001aff;
 .current-slide {
   background-color: #ffffffec;
 }
-
 
 /* Footage Section */
 .footage {
@@ -251,7 +248,7 @@ $myblue: #001aff;
       transition: all 0.3s ease;
       padding: 10px;
     }
-    
+
     &--links img {
       display: flex;
       align-items: center;
@@ -268,7 +265,6 @@ $myblue: #001aff;
   }
 }
 
-
 /* Info Section */
 
 .info {
@@ -284,7 +280,7 @@ $myblue: #001aff;
     margin-bottom: auto;
     display: block;
     width: 70vh;
-    padding: 20px 20px 20px 0;
+    padding: 20px 20px 20px 10px;
   }
   &__container-img {
     display: flex;
@@ -292,12 +288,14 @@ $myblue: #001aff;
     width: auto;
   }
   &__title {
-    padding: 15px 0 5px 0;
+    padding: 10px;
     text-transform: capitalize;
     text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
   }
   &__subtitle {
-    padding: 10px 0 5px 0;
+    padding: 10px;
   }
   &__article {
     font-size: 14px;
@@ -305,8 +303,9 @@ $myblue: #001aff;
     margin: 0 auto;
     padding: 0;
     height: auto;
-    text-align: left;
-    padding: 8px 0 20px 0;
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 10px;
   }
   &__contact {
     font-size: 15px;
@@ -342,7 +341,7 @@ $myblue: #001aff;
     width: 50%;
     padding: 0;
     cursor: pointer;
-    
+
     h3 {
       display: flex;
       z-index: 999;
@@ -383,9 +382,7 @@ $myblue: #001aff;
   &__col-1:hover {
     filter: contrast(1.4) brightness(1.2);
   }
-  
 }
- 
 
 .highlight {
   border-bottom: 4px solid rgb(0, 0, 0);
@@ -399,17 +396,16 @@ $myblue: #001aff;
     display: block;
     padding: 0;
     height: auto;
-    &__container-article{
+    &__container-article {
       width: 100%;
       padding: 10px;
-    } 
+    }
     &__img {
       margin-bottom: 100px;
       width: 100%;
       height: auto;
       padding: 20px;
     }
-    
   }
   .carousel {
     &__button {
@@ -484,6 +480,7 @@ $myblue: #001aff;
 
   .navbar__logo {
     padding-left: 25px;
+    font-weight: 800;
   }
 
   .navbar__toggle .bar {
@@ -503,10 +500,10 @@ $myblue: #001aff;
     justify-content: flex-start;
     padding: 25px;
     width: 100%;
+    font-weight: 800;
   }
   .active-link {
     width: 100%;
-    
   }
   .footage {
     padding: 0;
@@ -517,13 +514,14 @@ $myblue: #001aff;
   }
   .footage__container--item {
     font-size: 13px;
+    font-weight: 800;
   }
   .footage__container--links {
     font-size: 13px;
     padding: 4px;
+    font-weight: 800;
   }
   .wrapper {
-  
     &__col {
       display: block;
       position: relative;
@@ -557,7 +555,6 @@ $myblue: #001aff;
   .navbar__btn {
     padding-bottom: 2rem;
   }
-  
 
   #mobile-menu {
     position: absolute;
@@ -583,4 +580,3 @@ $myblue: #001aff;
     transform: translateY(-8px) rotate(-45deg);
   }
 }
-
