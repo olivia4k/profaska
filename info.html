@@ -7,9 +7,6 @@
     <title>Justyna Profaska</title>
     <link href="styles/normalize.css" rel="stylesheet" type="text/css"/>
     <link href="styles/style.css" rel="stylesheet" type="text/css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap" rel="stylesheet">
             <!-- Google tag (gtag.js) -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-31KEFP8BNL"></script>
             <script>
@@ -54,30 +51,18 @@
       <div class="info">
         <div class="info__container-article">
           <h2 class="info__title">Justyna Profaska</h2>
-          <article class="info__article"><b>Justyna Profaska is an architect and a PhD Candidate in Landscape and
-Environment at La Sapienza University of Rome. Her thesis, titled ‘Virtual
-Landscapes’ explores the significance of nature in the contemporary society
-through the analysis of artistic manifestations. The research unveils the topic
-of landscape as social construct, operating within the realm of visual arts as
-a subject, medium, and potential field for action.
-She holds Msc in architecture form Poznan University of Technology and
-studied abroad at the Karlsruhe Institute of Technology and Sapienza
-University of Rome. She worked for Wenzel+Wenzel Freie Architekten and
-Studio Fuksas in Rome.
-After winning the Ph.D fellowship she shifted her focus towards educational
-and theoretical pursuits. In 2023 she organised multidisciplinary panel
-‘Triggering the change: collective action in the landscape’. The same year she
-was a speaker on the international conference ‘Uncertain Landscapes’ in
-Porto addressing architectural and landscape discourse. In 2024 she
-conducted her research on PhD thesis in the archive of Harald Szeemann at
-Getty Research Institute in Los Angeles, CA.</b><br>
+          <article class="info__article">
+            <p>Justyna Profaska, PhD, is an architect at Diener &amp; Diener Architects and a postdoctoral researcher at the gta Institute at ETH Zurich. She received her PhD in Landscape and Environment from Sapienza University of Rome in 2025. Her dissertation, <i>Virtuality of Landscape: Atlas of Artistic Manifestations from Real to Imaginary</i>, examines landscape as a social construct through Gilles Deleuze’s and Henri Bergson’s concepts of virtuality and their reinterpretation in contemporary artistic practices. Her research lies at the intersection of architecture, art, landscape, and cultural theory, exploring the approaches that question disciplinary boundaries within architecture.</p>
+            <p>In 2026, she was awarded a Swiss Government Excellence Scholarship to pursue research at ETH Zurich (2026–2027). Her project, <i>gta exhibitions (2014–2025): Art Exhibitions as Critical Instruments towards Interdisciplinary Architectural Education</i>, investigates exhibitions as instruments of knowledge production and exchange between art and architecture, building on an interest in interdisciplinarity and the potential of curatorial methodologies in teaching and learning about architecture. During her doctoral studies, she also conducted archival research at the Getty Research Institute in Los Angeles, focusing on Harald Szeemann’s curatorial methodologies.</p>
+            <p>She holds an MSc (2020) and a BSc (2018) in Architecture from Poznan University of Technology, complemented by academic exchanges at the Karlsruhe Institute of Technology and Sapienza University of Rome. Her professional experience includes positions at Studio Fuksas in Rome and Wenzel+Wenzel Freie Architekten in Berlin.</p>
+            <p>Among others, she received a Sapienza Avvio alla Ricerca grant (2024–2025) for her research on Oskar Hansen’s vision for the 1958 Auschwitz Monument, <i>The Road</i>, and organized the international conference series <i>Triggering the Change: Collective Action in the Landscape</i> (2023).</p>
           </article>
           <p class="info__contact">Contact for information:<br>justyna.profaska@gmail.com</p>
           <p class="info__contact">Adress:
           <br>Piazza Borghese 9, Rome</p>
         </div>
         <div class="info__container-img">
-        <img class="info__img" src="assets/info/Justa 1.jpg" alt="Justyna"></img></div>
+        <img class="info__img" src="assets/info/Justyna.jpg" alt="Justyna Profaska" width="1068" height="1600" decoding="async"></div>
       </div>
       <!-- Footer Section -->
       <div class="footage">
@@ -108,7 +93,7 @@ Getty Research Institute in Los Angeles, CA.</b><br>
       <script>
         const menu = document.querySelector("#mobile-menu");
         const menuLinks = document.querySelector(".navbar__menu");
-        const navLogo = document.querySelector("#navbar__logo");
+        const navLogo = document.querySelector('.navbar__logo');
 
         const mobileMenu = () => {
           menu.classList.toggle("is-active");
@@ -119,7 +104,7 @@ Getty Research Institute in Los Angeles, CA.</b><br>
 
         const hideMobileMenu = () => {
           const menuBars = document.querySelector(".is-active");
-          if (window.innerWidth <= 768 && menuBars) {
+          if (window.innerWidth <= 960 && menuBars) {
             menu.classList.toggle("is-active");
             menuLinks.classList.remove("active");
           }

@@ -116,7 +116,7 @@
 //Hamburger
 const menu = document.querySelector('#mobile-menu');
 const menuLinks = document.querySelector('.navbar__menu');
-const navLogo = document.querySelector('#navbar__logo');
+const navLogo = document.querySelector('.navbar__logo');
 
 // Display Mobile Menu
 const mobileMenu = () => {
@@ -124,16 +124,73 @@ const mobileMenu = () => {
   menuLinks.classList.toggle('active');
 };
 
-menu.addEventListener('click', mobileMenu);
+if (menu && menuLinks) {
+  menu.addEventListener('click', mobileMenu);
+}
 
 //  Close mobile Menu when clicking on a menu item
 const hideMobileMenu = () => {
   const menuBars = document.querySelector('.is-active');
-  if (window.innerWidth <= 768 && menuBars) {
+  if (menu && menuLinks && window.innerWidth <= 960 && menuBars) {
     menu.classList.toggle('is-active');
     menuLinks.classList.remove('active');
   }
 };
 
-menuLinks.addEventListener('click', hideMobileMenu);
-navLogo.addEventListener('click', hideMobileMenu);
+if (menuLinks) {
+  menuLinks.addEventListener('click', hideMobileMenu);
+}
+
+if (navLogo) {
+  navLogo.addEventListener('click', hideMobileMenu);
+}
+
+// "Coming soon" - a cursor reveals the text from under a white cover
+const workInProgress = document.querySelector('.work-in-progress');
+
+if (workInProgress) {
+  const text = workInProgress.textContent.trim();
+
+  const reveal = document.createElement('span');
+  reveal.className = 'work-in-progress__reveal';
+  reveal.setAttribute('aria-hidden', 'true');
+
+  const textElement = document.createElement('span');
+  textElement.className = 'work-in-progress__text';
+
+  const wordElements = text.split(/\s+/).map((word) => {
+    const wordElement = document.createElement('span');
+    wordElement.className = 'work-in-progress__word';
+    wordElement.textContent = word;
+    return wordElement;
+  });
+
+  wordElements.forEach((wordElement, index) => {
+    if (index > 0) textElement.append(' ');
+    textElement.append(wordElement);
+  });
+
+  const mask = document.createElement('span');
+  mask.className = 'work-in-progress__mask';
+
+  const cursor = document.createElement('span');
+  cursor.className = 'work-in-progress__cursor';
+
+  mask.appendChild(cursor);
+  reveal.append(textElement, mask);
+
+  const label = document.createElement('span');
+  label.className = 'visually-hidden';
+  label.textContent = text;
+
+  workInProgress.textContent = '';
+  workInProgress.append(label, reveal);
+
+  const firstWord = wordElements[0];
+  if (firstWord) {
+    mask.style.setProperty(
+      '--first-word-width',
+      `${firstWord.getBoundingClientRect().width}px`
+    );
+  }
+}
